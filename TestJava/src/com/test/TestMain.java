@@ -1,7 +1,9 @@
 package com.test;
 
+import java.io.IOException;
+
 public class TestMain {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		A a = new A();
 
@@ -20,7 +22,7 @@ public class TestMain {
 
 class A {
 
-	void method() {
+	void method()throws IOException {
 		System.out.println("From class A");
 	}
 
@@ -31,7 +33,7 @@ class A {
 
 class B extends A {
 
-	void method() {
+	void method() throws NullPointerException{
 		System.out.println("From class B");
 	}
 
